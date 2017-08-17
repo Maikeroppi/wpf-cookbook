@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" FontSize="20">
+            <local:Book Name="Windows Internals"
+             Author="Mark Russinovich" Price="40"
+             YearPublished="2009" />
+        </Button>
+        <Button Grid.Row="1" FontSize="20">
+            <local:Book Name="WPF 4.5 Cookbook"
+             Author="Pavel Yosifovich" Price="0"
+             YearPublished="2012" />
+        </Button>
     </Grid>
 </Window>
