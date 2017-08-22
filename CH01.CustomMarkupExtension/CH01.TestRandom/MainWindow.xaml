@@ -4,11 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CH01.TestRandom"
-        xmlns:mext="CH01.CustomMarkupExtension; assembly=CH01.CustomMarkupExtension"
+        xmlns:mext="clr-namespace:CH01.CustomMarkupExtension;assembly=CH01.CustomMarkupExtension"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <StackPanel>
         <TextBlock FontSize="{mext:Random 10, 100}" Text="Hello" x:Name="text1" />
         <TextBlock Text="{Binding FontSize, ElementName=text1}" />
+        <TextBlock Text="{mext:Random 1000}" />
     </StackPanel>
 </Window>
