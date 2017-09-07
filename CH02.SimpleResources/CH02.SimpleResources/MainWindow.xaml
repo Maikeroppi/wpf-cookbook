@@ -6,22 +6,15 @@
         xmlns:local="clr-namespace:CH02.SimpleResources"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="brush1">
+            <GradientStop Offset="0" Color="Yellow"/>
+            <GradientStop Offset="1" Color="Brown" />
+        </LinearGradientBrush>
+    </Window.Resources>
     <StackPanel>
-        <Rectangle Height="100" Stroke="Black">
-            <Rectangle.Fill>
-                <LinearGradientBrush>
-                    <GradientStop Offset="0" Color="Yellow"/>
-                    <GradientStop Offset="1" Color="Brown" />
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Ellipse StrokeThickness="20" Height="100">
-            <Ellipse.Stroke>
-                <LinearGradientBrush>
-                    <GradientStop Offset="0" Color="Yellow"/>
-                    <GradientStop Offset="1" Color="Brown" />
-                </LinearGradientBrush>
-            </Ellipse.Stroke>
+        <Rectangle Height="100" Stroke="Black" Fill="{StaticResource brush1}" />
+        <Ellipse StrokeThickness="20" Height="100" Stroke="{StaticResource brush1}" />
         </Ellipse>
     </StackPanel>
 </Window>
